@@ -60,5 +60,48 @@ int intParse()
 
 void ejercicio1()
 {
+    List<int> notes = new List<int>() {9, 4, 3, 6, 9, 5, 7, 1, 3, 8};
+
+    Console.WriteLine("\nLas notas del Alumno son: ");
+    foreach (var item in notes)
+    {
+        Console.WriteLine(item);
+    }
+    Console.WriteLine("Y su promedio es de" + calculateAverage(notes));
+
+    int calculateAverage(List<int> listNotes)
+    {
+        int sum = 0;
+        foreach (var item in listNotes)
+        {
+            sum += item;
+        }
+        var average = sum / 10;
+        return average;
+    }
+}
+
+void ejercicio2()
+{
+    List<int> ages = new List<int>() { 38, 45, 35, 57, 10, 29, 47, 36, 8, 22, 52, 29, 43, 23, 6, 17, 54, 16, 9, 7};
+
+    int older = 0, minors = 0;
+    foreach (var age in ages)
+    {
+        if (age < 18)
+        {
+            minors++;
+        }
+        else
+        {
+            older++;
+        }
+    }
+
+    Console.WriteLine($"La cantidad de menores en la lista es {minors} y la de mayores es {older}");
+}
+
+void ejercicio3()
+{
 
 }
